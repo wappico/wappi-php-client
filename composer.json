@@ -1,0 +1,24 @@
+{
+    "name": "wappico/wappi-php-client",
+    "description": "PHP SDK Client for wappi.co",
+    "homepage": "https://github.com/wappico/wappi-php-client",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Wappi\\Client\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Wappi",
+            "email": "opensource@wappi.co"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
