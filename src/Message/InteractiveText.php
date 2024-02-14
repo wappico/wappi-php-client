@@ -13,7 +13,8 @@ class InteractiveText
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::INTERACTIVE_TEXT;
+    const MESSAGE_TYPE = MessageType::INTERACTIVE_TEXT;
+
     public string|int $id;
     public null|string|int $header;
     public string|int $text;

@@ -13,7 +13,8 @@ class Video
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::VIDEO;
+    const MESSAGE_TYPE = MessageType::VIDEO;
+
     public string $url;
     public null|string|int $text;
     public int $secondsDelay = 1;

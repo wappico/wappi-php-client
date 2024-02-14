@@ -10,6 +10,10 @@ trait StaticCreateSelf
     {
         $dto = new self();
 
+        if (defined('self::MESSAGE_TYPE')) {
+            $dto->messageType = self::MESSAGE_TYPE;
+        }
+
         foreach ($values as $key => $value) {
             if (property_exists($dto, $key)) {
                 $dto->$key = $value;
@@ -26,6 +30,6 @@ trait StaticCreateSelf
 
     public static function getMessageType()
     {
-        return self::$messageType;
+        return self::MESSAGE_TYPE;
     }
 }

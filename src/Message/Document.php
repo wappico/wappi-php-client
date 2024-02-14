@@ -13,7 +13,8 @@ class Document
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::DOCUMENT;
+    const MESSAGE_TYPE = MessageType::DOCUMENT;
+    
     public string $url;
     public string $filename;
     public int $secondsDelay = 1;

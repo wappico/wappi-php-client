@@ -13,7 +13,8 @@ class InteractiveDocument
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::INTERACTIVE_DOCUMENT;
+    const MESSAGE_TYPE = MessageType::INTERACTIVE_DOCUMENT;
+
     public string|int $id;
     public string $url;
     public string|int $text;

@@ -13,7 +13,8 @@ class Image
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::IMAGE;
+    const MESSAGE_TYPE = MessageType::IMAGE;
+
     public string $url;
     public null|string|int $text;
     public int $secondsDelay = 1;

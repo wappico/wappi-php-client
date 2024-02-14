@@ -13,7 +13,8 @@ class Sticker
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::STICKER;
+    const MESSAGE_TYPE = MessageType::STICKER;
+
     public string $url;
     public int $secondsDelay = 1;
 }

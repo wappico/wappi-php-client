@@ -13,7 +13,8 @@ class Message
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::MESSAGE;
+    const MESSAGE_TYPE = MessageType::MESSAGE;
+
     public string|int $text;
     public bool $previewUrl = false; // If you want to add a preview URL, set true:
     public int $secondsDelay = 1;

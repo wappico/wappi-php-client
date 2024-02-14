@@ -13,7 +13,8 @@ class InteractiveImage
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::INTERACTIVE_IMAGE;
+    const MESSAGE_TYPE = MessageType::INTERACTIVE_IMAGE;
+
     public string|int $id;
     public string $url;
     public string|int $text;

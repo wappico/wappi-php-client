@@ -13,7 +13,8 @@ class InteractiveButton
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::INTERACTIVE_BUTTON;
+    const MESSAGE_TYPE = MessageType::INTERACTIVE_BUTTON;
+
     public string|int $id;
     public string $text;
 }

@@ -13,7 +13,8 @@ class Audio
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::AUDIO;
+    const MESSAGE_TYPE = MessageType::AUDIO;
+
     public string $url;
     public int $secondsDelay = 1;
 }

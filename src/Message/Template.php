@@ -13,5 +13,5 @@ class Template
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::TEMPLATE;
+    const MESSAGE_TYPE = MessageType::TEMPLATE;
 }

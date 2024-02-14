@@ -13,7 +13,8 @@ class InteractiveVideo
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::INTERACTIVE_VIDEO;
+    const MESSAGE_TYPE = MessageType::INTERACTIVE_VIDEO;
+
     public string|int $id;
     public string $url;
     public string|int $text;

@@ -13,7 +13,8 @@ class InteractiveListSectionOption
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::INTERACTIVE_LIST_SECTION_OPTION;
+    const MESSAGE_TYPE = MessageType::INTERACTIVE_LIST_SECTION_OPTION;
+
     public string|int $id;
     public string|int $title;
     public string|int|null $description;

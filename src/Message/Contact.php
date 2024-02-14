@@ -13,6 +13,7 @@ class Contact
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::CONTACT;
+    const MESSAGE_TYPE = MessageType::CONTACT;
+
     public int $secondsDelay = 1;
 }

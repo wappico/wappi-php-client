@@ -13,7 +13,8 @@ class Location
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::LOCATION;
+    const MESSAGE_TYPE = MessageType::LOCATION;
+
     public float|string $longitude;
     public float|string $latitude;
     public string $name;
