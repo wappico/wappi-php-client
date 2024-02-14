@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Sdk\Rules;
-
-use App\Sdk\Enums\MessageType;
+namespace Wappi\Client\Rules;
 
 class AudioRules
 {

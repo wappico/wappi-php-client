@@ -1,6 +1,6 @@
 <?php
 
-namespace Wappi\Client\Dto;
+namespace Wappi\Client\Message;
 
 use Wappi\Client\Enums\MessageType;
 use Wappi\Client\Traits\StaticCreateSelf;
@@ -14,9 +14,9 @@ class InteractiveText
     use Validate;
 
     public static MessageType $messageType = MessageType::INTERACTIVE_TEXT;
-    public readonly string|int $id;
-    public readonly null|string|int $header;
-    public readonly string|int $text;
-    public readonly null|string|int $footer;
+    public string|int $id;
+    public null|string|int $header;
+    public string|int $text;
+    public null|string|int $footer;
     public int $secondsDelay = 1;
 }

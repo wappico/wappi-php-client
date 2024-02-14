@@ -1,17 +1,18 @@
 <?php
 
-namespace Wappi\Client\Dto;
+namespace Wappi\Client\Message;
 
 use Wappi\Client\Enums\MessageType;
 use Wappi\Client\Traits\StaticCreateSelf;
 use Wappi\Client\Traits\ToArray;
 use Wappi\Client\Traits\Validate;
 
-class Template
+class Contact
 {
     use StaticCreateSelf;
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::TEMPLATE;
+    public static MessageType $messageType = MessageType::CONTACT;
+    public int $secondsDelay = 1;
 }

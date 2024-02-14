@@ -1,6 +1,6 @@
 <?php
 
-namespace Wappi\Client\Dto;
+namespace Wappi\Client\Message;
 
 use Wappi\Client\Enums\MessageType;
 use Wappi\Client\Traits\StaticCreateSelf;
@@ -14,9 +14,9 @@ class InteractiveVideo
     use Validate;
 
     public static MessageType $messageType = MessageType::INTERACTIVE_VIDEO;
-    public readonly string|int $id;
-    public readonly string $url;
-    public readonly string|int $text;
-    public readonly null|string|int $footer;
+    public string|int $id;
+    public string $url;
+    public string|int $text;
+    public null|string|int $footer;
     public int $secondsDelay = 1;
 }

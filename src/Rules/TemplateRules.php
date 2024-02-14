@@ -1,15 +1,7 @@
 <?php
 
-namespace App\Sdk\Rules;
-
-use App\Sdk\Enums\MessageType;
-use App\Sdk\Traits\StaticCreateSelf;
-use App\Sdk\Traits\ToArray;
+namespace Wappi\Client\Rules;
 
 class TemplateRules
 {
-    use StaticCreateSelf;
-    use ToArray;
-
-    public static MessageType $messageType = MessageType::TEMPLATE;
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Wappi\Client\Dto;
+namespace Wappi\Client\Message;
 
 use Wappi\Client\Enums\MessageType;
 use Wappi\Client\Traits\StaticCreateSelf;
@@ -14,7 +14,7 @@ class Document
     use Validate;
 
     public static MessageType $messageType = MessageType::DOCUMENT;
-    public readonly string $url;
-    public readonly string $filename;
+    public string $url;
+    public string $filename;
     public int $secondsDelay = 1;
 }

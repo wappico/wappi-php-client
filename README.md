@@ -6,17 +6,35 @@ composer require wappico/wappi-php-client
 ```
 
 Usage:
+
 ```php
-$wappi = new \Wappi\Client\WappiClient(apiKey: 'your-api-key');
+use Wappi\Client\Wappi;
+
+
+$wappi = new Wappi(
+    new \Wappi\Client\Strategies\Whatsapp(apiKey: '')
+);
 
 $wappi->add(
-    \Wappi\Client\Dto\Message::create(["text" => "¡Hi there!"])
+    \Wappi\Client\Message\Message::create(["text" => "¡Hi there!"])
 );
 
 $wappi->addMany(
-    \Wappi\Client\Dto\Message::create(["text" => "¡Hi there!"]),
-    \Wappi\Client\Dto\Image::create(["url" => "https://wappi.co/image.png", "text" => "¡Hi there!"]),
+    \Wappi\Client\Message\Message::create(["text" => "¡Hi there!"]),
+    \Wappi\Client\Message\Image::create(["url" => "https://wappi.co/image.png", "text" => "¡Hi there!"]),
 );
 
 $wappi->send();
+```
+
+Or you can use the strategy:
+
+```php
+
+$whatsapp = new \Wappi\Client\Strategies\Whatsapp(apiKey: '')
+
+$whatsapp->request([
+    \Wappi\Client\Message\Message::create(["text" => "¡Hi there!"]),
+    \Wappi\Client\Message\Image::create(["url" => "https://wappi.co/image.png", "text" => "¡Hi there!"]),
+]);
 ```

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Sdk\Rules;
+namespace Wappi\Client\Rules;
 
 class InteractiveTextRules
 {

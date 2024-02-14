@@ -1,21 +1,20 @@
 <?php
 
-namespace Wappi\Client\Dto;
+namespace Wappi\Client\Message;
 
 use Wappi\Client\Enums\MessageType;
 use Wappi\Client\Traits\StaticCreateSelf;
 use Wappi\Client\Traits\ToArray;
 use Wappi\Client\Traits\Validate;
 
-class Message
+class Image
 {
     use StaticCreateSelf;
     use ToArray;
     use Validate;
 
-    public static MessageType $messageType = MessageType::MESSAGE;
-    public readonly string|int $text;
-    public bool $previewUrl = false; // If you want to add a preview URL, set true:
+    public static MessageType $messageType = MessageType::IMAGE;
+    public string $url;
+    public null|string|int $text;
     public int $secondsDelay = 1;
-
 }

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Wappi\Client\Traits;
 
 use Wappi\Client\Enums\MessageType;
-use Wappi\Client\Dto\InteractiveList;
-use Wappi\Client\Dto\InteractiveListSection;
+use Wappi\Client\Message\InteractiveList;
+use Wappi\Client\Message\InteractiveListSection;
 use Wappi\Client\Rules\AudioRules;
 use Wappi\Client\Rules\ContactRules;
 use Wappi\Client\Rules\DocumentRules;

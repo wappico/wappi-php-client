@@ -1,6 +1,6 @@
 <?php
 
-namespace Wappi\Client\Dto;
+namespace Wappi\Client\Message;
 
 use Wappi\Client\Enums\MessageType;
 use Wappi\Client\Traits\StaticCreateSelf;
@@ -14,9 +14,9 @@ class Location
     use Validate;
 
     public static MessageType $messageType = MessageType::LOCATION;
-    public readonly float|string $longitude;
-    public readonly float|string $latitude;
-    public readonly string $name;
-    public readonly string $address;
+    public float|string $longitude;
+    public float|string $latitude;
+    public string $name;
+    public string $address;
     public int $secondsDelay = 1;
 }

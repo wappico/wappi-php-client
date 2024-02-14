@@ -1,6 +1,6 @@
 <?php
 
-namespace Wappi\Client\Dto;
+namespace Wappi\Client\Message;
 
 use Wappi\Client\Enums\MessageType;
 use Wappi\Client\Traits\StaticCreateSelf;
@@ -14,7 +14,7 @@ class InteractiveListSection
     use Validate;
 
     public static MessageType $messageType = MessageType::INTERACTIVE_LIST_SECTION;
-    public readonly null|string|int $title;
-    public readonly null|string|int $description;
-    public readonly array $options;
+    public null|string|int $title;
+    public null|string|int $description;
+    public array $options;
 }

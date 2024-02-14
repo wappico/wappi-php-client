@@ -1,6 +1,6 @@
 <?php
 
-namespace Wappi\Client\Dto;
+namespace Wappi\Client\Message;
 
 use Wappi\Client\Enums\MessageType;
 use Wappi\Client\Traits\StaticCreateSelf;
@@ -14,10 +14,10 @@ class InteractiveDocument
     use Validate;
 
     public static MessageType $messageType = MessageType::INTERACTIVE_DOCUMENT;
-    public readonly string|int $id;
-    public readonly string $url;
-    public readonly string|int $text;
-    public readonly string|int $filename;
-    public readonly null|string|int $footer;
+    public string|int $id;
+    public string $url;
+    public string|int $text;
+    public string|int $filename;
+    public null|string|int $footer;
     public int $secondsDelay = 1;
 }
