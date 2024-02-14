@@ -18,6 +18,16 @@ class Whatsapp implements Strategy
     }
 
     /**
+     * @param $salt
+     * @return string
+     */
+    private function signature($salt)
+    {
+        $signature = hash_hmac('sha256', json_encode($salt), $this->apiKey, true);
+        return base64_encode($signature);
+    }
+
+    /**
      * @param array $data
      * @return \GuzzleHttp\Promise\PromiseInterface|\Illuminate\Http\Client\Response
      */
@@ -29,7 +39,10 @@ class Whatsapp implements Strategy
             10
         )->withHeaders([
             'User-Agent' => 'Wappi/0.0.1',
-        ])->post($this->apiHost, $data);
+        ])->post($this->apiHost, [
+            'messages' => $data,
+            'signature' => $this->signature($data)
+        ]);
     }
 
     /**
@@ -44,6 +57,9 @@ class Whatsapp implements Strategy
             10
         )->withHeaders([
             'User-Agent' => 'Wappi/0.0.1',
-        ])->async()->post($this->apiHost, $data);
+        ])->async()->post($this->apiHost, [
+            'messages' => $data,
+            'signature' => $this->signature($data)
+        ]);
     }
 }
