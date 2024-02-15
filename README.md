@@ -27,4 +27,81 @@ $whatsapp->request([
     \Wappi\Client\Message\Message::create(["text" => "¡Hi there!"]),
     \Wappi\Client\Message\Image::create(["url" => "https://wappi.co/image.png", "text" => "¡Hi there!"]),
 ]);
+
+```
+
+Interactive list
+
+```php
+
+$whatsapp = new \Wappi\Client\Strategies\Whatsapp(apiKey: '',);
+
+$optionA = \Wappi\Client\Message\InteractiveListSectionOption::create([
+    "id" => "optionA",
+    "title" => "title a",
+    "description" => "description a",
+]);
+
+$optionB = \Wappi\Client\Message\InteractiveListSectionOption::create([
+    "id" => 123,
+    "title" => "title b",
+    "description" => "description b",
+]);
+
+$optionC = \Wappi\Client\Message\InteractiveListSectionOption::create([
+    "id" => "optionA123",
+    "title" => "title c",
+    "description" => "description c",
+]);
+
+$sections = [
+    \Wappi\Client\Message\InteractiveListSection::create([
+        "title" => "First section",
+        "description" => "some a",
+        "options" => [
+            $optionA,
+        ]
+    ]),
+    \Wappi\Client\Message\InteractiveListSection::create([
+        "title" => "Second section",
+        "description" => "some b",
+        "options" => [
+            $optionB, $optionC,
+        ]
+    ])
+];
+
+\Wappi\Client\Message\InteractiveList::create([
+    "id" => 1111,
+    "title" => "demo",
+    "text" => "some description",
+    "buttonTitle" => "Menú",
+    "sections" => $sections
+]);
+```
+
+
+Interactive options
+
+```php
+$whatsapp = \Wappi\Client\Message\InteractiveText::create([
+    "id" => "",
+    "header" => "",
+    "text" => "",
+    "footer" => "",
+    "options" => [
+        \Wappi\Client\Message\InteractiveButton::create([
+            "id" => "foo",
+            "text" => "bar"
+        ]),
+        \Wappi\Client\Message\InteractiveButton::create([
+            "id" => "foo2",
+            "text" => "bar2"
+        ]),
+        \Wappi\Client\Message\InteractiveButton::create([
+            "id" => "foo3",
+            "text" => "bar3"
+        ]),
+    ],
+]);
 ```

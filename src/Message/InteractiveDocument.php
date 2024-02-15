@@ -20,5 +20,6 @@ class InteractiveDocument
     public string|int $text;
     public string|int $filename;
     public null|string|int $footer;
+    public array $options;
     public int $secondsDelay = 1;
 }

@@ -18,4 +18,5 @@ class InteractiveListSectionOption
     public string|int $id;
     public string|int $title;
     public string|int|null $description;
+    public string $type = "text";
 }
