@@ -15,5 +15,12 @@ class Contact
 
     const MESSAGE_TYPE = MessageType::CONTACT;
 
+    public array $name = [];
+    public array $org = [];
+    public array $emails = [];
+    public array $phones = [];
+    public array $addresses = [];
+    public array $urls = [];
+    public array $ims = [];
     public int $secondsDelay = 1;
 }
