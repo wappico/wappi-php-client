@@ -2,18 +2,19 @@
 
 namespace Wappi\Client\Message;
 
-use Wappi\Client\Enums\MessageType;
 use Wappi\Client\Traits\StaticCreateSelf;
 use Wappi\Client\Traits\ToArray;
-use Wappi\Client\Traits\Validate;
 
 class ContactAddress
 {
     use StaticCreateSelf;
     use ToArray;
-    use Validate;
 
-    const MESSAGE_TYPE = MessageType::CONTACT;
-
-    public int $secondsDelay = 1;
+    public string|null $city;
+    public string|null $country;
+    public string|null $countryCode;
+    public string|null $state;
+    public string|null $street;
+    public string|null $type;
+    public string|null $zip;
 }

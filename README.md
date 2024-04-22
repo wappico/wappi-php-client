@@ -80,7 +80,6 @@ $sections = [
 ]);
 ```
 
-
 Interactive options
 
 ```php
@@ -102,6 +101,61 @@ $whatsapp = \Wappi\Client\Message\InteractiveText::create([
             "id" => "foo3",
             "text" => "bar3"
         ]),
+    ],
+]);
+```
+
+Contact
+
+```php
+$whatsapp = \Wappi\Client\Message\Contact::create([
+    "name" => \Wappi\Client\Message\ContactName::create([
+        "firstName" => "Dev",
+        "lastName" => "Support",
+        "formattedName" => "Dev Support",
+    ]),
+    "org" => [
+        \Wappi\Client\Message\ContactOrg::create([
+            "company" => "Meta Inc.",
+        ])
+    ],
+    "emails" => [
+        \Wappi\Client\Message\ContactEmail::create([
+            "email" => "example@gmail.com",
+            "type" => "WORK",
+        ])
+    ],
+    "phones" => [
+        \Wappi\Client\Message\ContactPhone::create([
+            "phone" => "7738305433",
+            "type" => "Mobile",
+        ])
+    ],
+    "addresses" => [
+        \Wappi\Client\Message\ContactAddress::create([
+            "city" => "Menlo Park",
+            "country" => "United States",
+            "countryCode" => "us",
+            "state" => "CA",
+            "street" => "1 Hacker Way",
+            "type" => "HOME",
+            "zip" => "94025",
+        ]),
+        \Wappi\Client\Message\ContactAddress::create([
+            "city" => "Menlo Park",
+            "country" => "United States",
+            "countryCode" => "us",
+            "state" => "CA",
+            "street" => "200 Jefferson Dr",
+            "type" => "WORK",
+            "zip" => "94025",
+        ])
+    ],
+    "urls" => [
+        \Wappi\Client\Message\ContactAddress::create([
+            "url" => "https://www.facebook.com",
+            "type" => "WORK",
+        ])
     ],
 ]);
 ```
