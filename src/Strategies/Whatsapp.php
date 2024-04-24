@@ -9,7 +9,7 @@ class Whatsapp implements Strategy
 {
     private $phone;
 
-    const API_OPT_URL = 'https://wappi.co/api/v1/whatsapp/opt-in';
+    const API_OPT_URL = 'https://platform.heybot.me/api/v0.1/opt-in';
 
     /**
      * @param string $apiKey
@@ -17,7 +17,7 @@ class Whatsapp implements Strategy
      */
     public function __construct(
         private string $apiKey = '',
-        private string $apiHost = 'https://wappi.co/api/v1/whatsapp',
+        private string $apiHost = 'https://platform.heybot.me/api/v0.1/messaging',
     ) {
     }
 
