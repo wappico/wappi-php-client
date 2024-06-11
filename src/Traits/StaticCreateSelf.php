@@ -6,6 +6,10 @@ namespace Wappi\Client\Traits;
 
 trait StaticCreateSelf
 {
+    public function __set(string $name, mixed $value): void {
+        $this->{$name} = $value;
+    }
+    
     public static function create(array $values): self
     {
         $dto = new self();
